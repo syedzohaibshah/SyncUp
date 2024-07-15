@@ -21,7 +21,7 @@ const EditProject = () => {
 
   useEffect(() => {
     const getProjectDetails = async () => {
-      const response = await fetch(`api/prompt/${projectId}`);
+      const response = await fetch(`api/project/${projectId}`);
       const data = await response.json();
       setPost({
         title: data.title,
@@ -42,7 +42,7 @@ const EditProject = () => {
     if (!projectId) return alert('Project ID not found');
 
     try {
-      const response = await fetch(`/api/prompt/${projectId}`, {
+      const response = await fetch(`/api/project/${projectId}`, {
         method: "PATCH",
         headers: {
           'Content-Type': 'application/json'

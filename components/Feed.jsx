@@ -33,7 +33,7 @@ const ProjectFeed = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch('/api/prompt');
+        const response = await fetch('/api/project');
         const data = await response.json();
         
         setProjects(data);

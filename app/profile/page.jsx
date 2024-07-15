@@ -30,14 +30,14 @@ const MyProjects = () => {
   }, [session?.user.id]);
 
   const handleEdit = (project) => {
-    router.push(`/update-prompt?id=${project._id}`);
+    router.push(`/update-project?id=${project._id}`);
   };
 
   const handleDelete = async (project) => {
     const hasConfirmed = confirm("Are you sure you want to delete this project?");
     if (hasConfirmed) {
       try {
-        await fetch(`/api/prompt/${project._id.toString()}`, {
+        await fetch(`/api/project/${project._id.toString()}`, {
           method: 'DELETE',
         });
         const filteredProjects = projects.filter((p) => p._id !== project._id);
@@ -50,7 +50,7 @@ const MyProjects = () => {
   const handleStatus = async (project) => {
     const updatedStatus = project.status === "open" ? "closed" : "open";
     try {
-      const response = await fetch(`/api/prompt/${project._id}`, {
+      const response = await fetch(`/api/project/${project._id}`, {
         method: 'PATCH',
         headers: {
           'Content-Type': 'application/json'

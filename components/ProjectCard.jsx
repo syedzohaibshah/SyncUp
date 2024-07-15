@@ -31,11 +31,7 @@ const ProjectCard = ({ project, handleEdit, handleDelete, handleTagClick ,handle
     }
   };
 
-  // const handleContact = () => {
-  //   const subject = encodeURIComponent(`Regarding your project: ${project.title}`);
-  //   const body = encodeURIComponent("Hello,\n\nI'm interested in your project...");
-  //   window.location.href = `mailto:${project.ownerEmail}?subject=${subject}&body=${body}`;
-  // }
+
   const handleContact = () => {
     const recipient = encodeURIComponent(project.contactEmail);
     const subject = encodeURIComponent(`Regarding your project: ${project.title}`);
@@ -148,11 +144,11 @@ const ProjectCard = ({ project, handleEdit, handleDelete, handleTagClick ,handle
        
 
  
-        <button 
+     {session?.user? ( <button 
         className="btn-primary flex flex-row items-center justify-center space-x-2 px-4 py-2" 
         onClick={handleContact}
       >
-        <span>Contact</span>
+        <span>Connect</span>
         <Image 
     
           src="/assets/icons/send.png" 
@@ -161,7 +157,7 @@ const ProjectCard = ({ project, handleEdit, handleDelete, handleTagClick ,handle
           alt="Send icon" 
           className="inline-block "
         />
-      </button>
+      </button>):<></>}  
       {session?.user.id === project.creator._id && pathName === "/profile" && (
         <div className='mt-5 flex-center gap-4 border-t border-gray-100 pt-3'>
           <p

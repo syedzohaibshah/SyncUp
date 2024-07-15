@@ -28,7 +28,7 @@ const CreateProject = () => {
         throw new Error("User is not authenticated");
       } 
 
-      const response = await fetch("/api/prompt/new", {
+      const response = await fetch("/api/project/new", {
         method: "POST",
         headers: {
           'Content-Type': 'application/json'

@@ -25,14 +25,14 @@ width={130}
 height={130}
 className='object-contain'
 alt="Promptify logo" /> 
-<p className='logo_text ml-2 font-extrabold'>SyncUp</p>
+<p className='logo_text  font-extrabold'>SyncUp</p>
   </Link>
 
   {/* Desktop Navigation */}
   <div className="sm:flex hidden">
     {session?.user ? (
         <div className='flex gap-3 md:gap-5'>
-        <Link href ="/create-prompt"
+        <Link href ="/create-project"
         className='black_btn'>Create Project</Link>
        
         <button type='button' onClick={signOut} className="outline_btn">
@@ -85,7 +85,7 @@ alt="Promptify logo" />
             onClick={()=>setToggleDropdown(false)}>
             My Profile
             </Link>
-            <Link href="/create-prompt"
+            <Link href="/create-project"
             className='dropdown_link'
             onClick={()=>setToggleDropdown(false)}>
             Create Prompt
