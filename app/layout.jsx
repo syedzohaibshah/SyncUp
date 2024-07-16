@@ -4,7 +4,7 @@ import Provider from "@components/Provider";
 
 export const metadata = {
   title: "SyncUp",
-  description: "Discover and share AI prompts",
+  description: "A Platform to Discover Amazing Projects",
 };
 
 const RootLayout = ({ children }) => {

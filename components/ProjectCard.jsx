@@ -70,10 +70,10 @@ const ProjectCard = ({ project, handleEdit, handleDelete, handleTagClick ,handle
 
           <div className='flex flex-col'>
             <h3 className='font-satoshi font-semibold text-gray-900'>
-              {project.creator.username}
+              {project.creator?.username}
             </h3>
             <p className='font-inter text-sm text-gray-500'>
-              {project.creator.email}
+              {project.creator?.email}
             </p>
           </div>
         </div>
