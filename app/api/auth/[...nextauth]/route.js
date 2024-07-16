@@ -3,7 +3,7 @@ import GoogleProvider from 'next-auth/providers/google';
 import { connectToDB } from '@utils/database';
 import User from '@model/user';
 
-const databaseName = 'test';
+const databaseName = 'SyncUp';
 
 let isConnected = false;
 

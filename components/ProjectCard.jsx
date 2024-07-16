@@ -94,6 +94,9 @@ const ProjectCard = ({ project, handleEdit, handleDelete, handleTagClick ,handle
 
       {/* <h2 className='my-2 font-satoshi font-semibold text-gray-900'>{project.title}</h2>
       <p className='my-4 font-satoshi text-sm text-gray-700'>{project.description}</p> */}
+
+
+      
        {/* Project Title */}
        <h2 className="text-xl font-bold mt-4 text-gray-800 mb-2">{project.title}</h2>
 
